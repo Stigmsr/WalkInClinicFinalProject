@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "126563941712",
+    "project_id": "walkinclinicfinalproject",
+    "storage_bucket": "walkinclinicfinalproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126563941712:android:a2e8d543e8b82f2a33c055",
+        "android_client_info": {
+          "package_name": "project.stn991577449.aksenov"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126563941712-7voso1ee3k2rq6hp1us9ur4avfbuapjv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC40QMKR61i1PALnAAV0yahGRqHE2goav0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126563941712-7voso1ee3k2rq6hp1us9ur4avfbuapjv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

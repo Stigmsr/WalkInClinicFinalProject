@@ -29,7 +29,6 @@ class AppointmentListAdapter(private val sampleList: List <Appointment>) :
             }
         }
     }
-
     override fun getItemCount() = sampleList.size
 
     inner class AppointmentViewHolder(val binding: AppointmentListAppointmentBinding)

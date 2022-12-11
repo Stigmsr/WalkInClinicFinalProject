@@ -20,7 +20,6 @@ import project.stn991577449.aksenov.data.Appointment
 import project.stn991577449.aksenov.databinding.FragmentAddAppointmentBinding
 
 class AddAppointmentFragment : Fragment() {
-   //private val navigationArgs: AppointmentDetailFragmentArgs by navArgs()
     private var _binding: FragmentAddAppointmentBinding? = null
     private val binding get() = _binding!!
     val fireStoreDatabase = FirebaseFirestore.getInstance()

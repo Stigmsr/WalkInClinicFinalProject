@@ -4,4 +4,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="add_fragment_title">Add Appointment</string>
+    <string name="login_prompt">Login</string>
+    <string name="help_string">All appointments are listed, if you are an admin you can click on button in right bottom to access add/delete menu</string>
+    <string name="about_string">Submission date: 12-11-22 by \nAksenov Vladislav(stn991577449)</string>
 </resources>

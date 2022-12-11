@@ -68,16 +68,16 @@
         tools:listitem="@layout/appointment_list_appointment" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/updateBtn"
+        android:id="@+id/helpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="41dp"
-        android:contentDescription="Update list"
-        android:src="@drawable/update"
+        android:contentDescription="Info about project"
+        android:src="@android:drawable/ic_menu_help"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:tint="@color/white" />
+        app:tint="@color/black" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -90,7 +90,7 @@
         android:src="@drawable/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/white" />
+        app:tint="@color/black" />
 
 
 

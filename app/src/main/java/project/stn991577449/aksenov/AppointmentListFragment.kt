@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import project.stn991577449.aksenov.data.Appointment
 import project.stn991577449.aksenov.databinding.AppointmentListFragmentBinding
@@ -16,7 +17,8 @@ import project.stn991577449.aksenov.databinding.AppointmentListFragmentBinding
 class AppointmentListFragment : Fragment() {
     private var _binding: AppointmentListFragmentBinding? = null
     private val binding get() = _binding!!
-    private val base = ArrayList<Appointment>()
+    private val base = mutableListOf<Appointment>()
+    private val firebaseAuth = FirebaseAuth.getInstance()
     val fireStoreDatabase = FirebaseFirestore.getInstance()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,30 +32,34 @@ class AppointmentListFragment : Fragment() {
                 if (it.isSuccessful) {
                     var cnt = 0
                     for(document in it.result!!) {
-                        base += Appointment(cnt, document.data.getValue("date").toString()
+                        base.add(Appointment(cnt, document.data.getValue("date").toString()
                             , document.data.getValue("hour").toString()
-                            , document.data.getValue("doctor").toString())
+                            , document.data.getValue("doctor").toString()))
+                        binding.recyclerView.adapter?.notifyDataSetChanged()
                         cnt += 1
                     }
                 }
             }
+        if (firebaseAuth.currentUser?.email.toString().equals("vlador3et@gmail.com")) {
+            binding.floatingActionButton.show()
+        } else {
+            binding.floatingActionButton.hide()
+        }
+        binding.recyclerView.adapter = AppointmentListAdapter(base)
+        binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
+
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setRecycler()
         binding.floatingActionButton.setOnClickListener {
             val action = AppointmentListFragmentDirections.actionAppointmentListFragmentToAddAppointmentFragment()
             this.findNavController().navigate(action)
         }
-        binding.updateBtn.setOnClickListener {
-            getUpdate()
+        binding.helpBtn.setOnClickListener {
+            val action = AppointmentListFragmentDirections.actionAppointmentListFragmentToHelpFragment()
+            this.findNavController().navigate(action)
         }
-    }
-    private fun setRecycler() {
-        Thread.sleep(11000)
-        binding.recyclerView.adapter = AppointmentListAdapter(base)
-        binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
     }
     private fun getUpdate(): List<Appointment> {
         val list = ArrayList<Appointment>()
@@ -72,20 +78,4 @@ class AppointmentListFragment : Fragment() {
             }
         return list
     }
-    /*private fun update() {
-        fireStoreDatabase.collection("appointments")
-            .get()
-            .addOnCompleteListener{
-                val result: StringBuffer = StringBuffer()
-                if (it.isSuccessful) {
-                    for(document in it.result!!) {
-                        result.append(document.data.getValue("date")).append(" ")
-                            .append(document.data.getValue("hour")).append(" ")
-                            .append(document.data.getValue("doctor"))
-                            .append("\n")
-                    }
-                }
-                binding?.listLog?.setText(result)
-            }
-    }*/
 }

@@ -12,9 +12,13 @@
         <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/appointment_list.xml" value="0.358695652173913" />
         <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/appointment_list_appointment.xml" value="0.358695652173913" />
         <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/appointment_list_fragment.xml" value="0.5" />
+        <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/fragment_about.xml" value="0.358695652173913" />
         <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/fragment_add_appointment.xml" value="0.35280797101449274" />
         <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/fragment_appointment_list.xml" value="0.35280797101449274" />
+        <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/fragment_help.xml" value="0.358695652173913" />
         <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/fragment_home.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/fragment_login.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/vlado/AndroidStudioProjects/WalkInClinicFinalProject/app/src/main/res/layout/help_fragment.xml" value="0.358695652173913" />
       </map>
     </option>
   </component>
